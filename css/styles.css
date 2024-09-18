@@ -1,0 +1,96 @@
+/* Estilos previos */
+body {
+    background: black;
+    color: aqua;
+    margin-top: 10px;
+    text-transform: uppercase;
+  }
+  
+
+  /*BUSCADOR*/
+  input {
+    width: 30vw;
+    padding: 10px;
+    outline: none;
+    border: 5px solid #000000;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    float: left;
+    margin-right: 0px;
+    list-style-type: none;
+    font-size: 0px;
+    position: relative; /* Agregamos position: relative para el contenedor de la imagen */
+  }
+  
+  .filtro {
+    display: none;
+    list-style-type: none;
+  }
+  
+  #listaArticulos {
+    list-style-type: none;
+    list-style: none;
+  }
+  
+  .articulo img {
+    padding: 7px;
+    margin: 1px auto;
+    height: 200px;
+    width: 135px;
+    transition: transform 0.3s ease;
+  }
+  
+  .button {
+    padding: 8px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 2px 2px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #ffffff;
+    color: rgb(255, 255, 255);
+  }
+  
+  .button a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+  }
+  
+  /* Efecto de texto y difuminado al pasar el cursor sobre la imagen */
+  .articulo img:hover {
+    filter: blur(
+      5px
+    ); /* Aplicamos un desenfoque al pasar el cursor sobre la imagen */
+  }
+  
+  .articulo .texto-hover {
+    position: absolute;
+    top: 50%; /* Ajusta la posición vertical del texto */
+    left: 50%; /* Ajusta la posición horizontal del texto */
+    transform: translate(-50%, -50%); /* Centra el texto en el contenedor */
+    color: aqua;
+    font-size: 18px;
+    text-align: center;
+    opacity: 0; /* Inicialmente oculto */
+    transition: opacity 0.3s ease; /* Agrega una transición suave para la opacidad */
+  }
+  .articulo:hover img {
+    filter: blur(5px); /* Difuminado de la imagen al pasar el cursor sobre ella */
+  }
+  
+  .articulo:hover .texto-hover {
+    opacity: 1; /* Muestra el texto al pasar el cursor sobre la imagen */
+  }
+  
